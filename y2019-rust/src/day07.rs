@@ -197,7 +197,7 @@ fn parse_param(mode: i32, value: i32) -> Param {
 }
 
 fn read() -> Program {
-    let file = File::open("files/7.in").expect("No file");
+    let file = File::open("files/07.in").expect("No file");
     let reader = BufReader::new(file);
 
     reader.lines()

@@ -30,7 +30,7 @@ fn solve2() -> i32 {
 }
 
 fn read() -> Vec<i32> {
-    let file = File::open("files/1.in").expect("No file");
+    let file = File::open("files/01.in").expect("No file");
     let reader = BufReader::new(file);
 
     reader.lines()

@@ -55,7 +55,7 @@ fn dfs2(g: &Graph, u: &String, par: &String, target: &String, d: i32) -> Option<
 }
 
 fn read() -> Result<Vec<(String, String)>, String> {
-    let file = File::open("files/6.in").expect("No file");
+    let file = File::open("files/06.in").expect("No file");
     let reader = BufReader::new(file);
 
     reader.lines()

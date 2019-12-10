@@ -253,7 +253,7 @@ fn parse_param(mode: i64, value: i64) -> Param {
 }
 
 fn read() -> Mem {
-    let file = File::open("files/9.in").expect("No file");
+    let file = File::open("files/09.in").expect("No file");
     let reader = BufReader::new(file);
 
     reader.lines()

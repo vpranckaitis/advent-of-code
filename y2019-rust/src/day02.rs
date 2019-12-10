@@ -50,7 +50,7 @@ fn run(xs: &mut Vec<i32>) -> i32 {
 }
 
 fn read() -> Vec<i32> {
-    let file = File::open("files/2.in").expect("No file");
+    let file = File::open("files/02.in").expect("No file");
     let reader = BufReader::new(file);
 
     reader.lines()

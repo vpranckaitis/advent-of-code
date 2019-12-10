@@ -73,7 +73,7 @@ fn parse_layers(xs: &Vec<i32>) -> HashMap<i32, Vec<i32>> {
 }
 
 fn read() -> Vec<i32> {
-    let file = File::open("files/8.in").expect("No file");
+    let file = File::open("files/08.in").expect("No file");
     let reader = BufReader::new(file);
 
     reader.lines()
