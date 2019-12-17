@@ -1,4 +1,4 @@
-use std::cmp::{max, min};
+use std::cmp::min;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
@@ -40,8 +40,6 @@ fn solve2() -> String {
 
     const MOD: i64 = 10;
 
-    println!();
-
     let pl = p.len();
     for _ in 1..10000 {
         for i in 0..pl {
@@ -57,19 +55,14 @@ fn solve2() -> String {
             partial.push(partial[i] + p[i]);
         }
 
-        let mut minv: i64 = 1e9 as i64;
-        let mut maxv: i64 = 0;
-
         let mut new_p: Vec<i64> = vec![];
         for i in 0..p.len() {
             let mut val: i64 = 0;
             let mut j = 1;
             for l in (i..partial.len()).step_by(i + 1) {
-                let rr = min(l + i + 1, partial.len() - 1);
-                let segment = partial[rr] - partial[l];
+                let r = min(l + i + 1, partial.len() - 1);
+                let segment = partial[r] - partial[l];
                 val += pattern[j % 4] * segment;
-                minv = min(minv, val);
-                maxv = max(maxv, val);
                 j += 1;
             }
             new_p.push(val.abs() % MOD);
