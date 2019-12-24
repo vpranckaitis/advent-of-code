@@ -1,6 +1,6 @@
 use std::collections::{HashMap, HashSet};
 
-use crate::intcode::{ self, Program };
+use crate::intcode::{self, Program};
 use std::rc::Rc;
 use std::cell::RefCell;
 
