@@ -60,7 +60,8 @@ pub fn run_till_io(program: &mut Program, input: &mut dyn FnMut() -> i64, output
 }
 
 fn run_till_interrupt(d: &mut Program, mut p: usize) -> State {
-    while let command = parse_command(&d.mem, p) {
+    loop {
+        let command = parse_command(&d.mem, p);
         match command {
             Arith(f, a, b, c) => {
                 let v1 = get(d, a);
