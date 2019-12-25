@@ -1,6 +1,6 @@
-mod day25;
+mod day22;
 mod intcode;
 
 fn main() {
-    day25::solve();
+    day22::solve();
 }
