@@ -1,0 +1,4 @@
+name = "y2020Julia"
+uuid = "ca5ace25-d8f8-47b8-ac6d-41c9f3e4ea38"
+authors = ["Vilius Pranckaitis <vpranckaitis@gmail.com>"]
+version = "0.1.0"
