@@ -48,7 +48,7 @@ function is_valid(key, value)
     function is_year_between(v, min, max)
         if match(r"^\d{4}$", v) !== nothing
            x = parse(Int, v)
-           return x >= min && x <= max
+           return min <= x <= max
         end
         return false
     end
@@ -63,8 +63,8 @@ function is_valid(key, value)
         m = match(r"^(\d{2,3})(in|cm)$", value)
         if m !== nothing
             h = parse(Int, m.captures[1])
-            return (m.captures[2] == "in" && h >= 59 && h <= 76) ||
-                    (m.captures[2] == "cm" && h >= 150 && h <= 193)
+            return (m.captures[2] == "in" && 59 <= h <= 76) ||
+                    (m.captures[2] == "cm" && 150 <= h <= 193)
         end
     elseif key == "hcl"
         return match(r"^#[0-9a-f]{6}$", value) !== nothing
