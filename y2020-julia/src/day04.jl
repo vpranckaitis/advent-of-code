@@ -95,8 +95,8 @@ end
 
 function main()
     input = read("files/04.in")
-    println(solve1(input))
-    println(solve2(input))
+    @time println(solve1(input))
+    @time println(solve2(input))
 end
 
 main()
