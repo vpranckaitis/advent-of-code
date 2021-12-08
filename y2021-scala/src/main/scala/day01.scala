@@ -1,6 +1,6 @@
 import scala.io.{Source, StdIn}
 
-object day1 extends App:
+object day01 extends App:
   val input = Source.fromFile("files/01.in")
 
   val depths = input.getLines().map { s =>

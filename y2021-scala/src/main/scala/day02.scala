@@ -1,7 +1,7 @@
 import java.lang.Integer.parseInt
 import scala.io.{Source, StdIn}
 
-object day2 extends App:
+object day02 extends App:
   val input = Source.fromFile("files/02.in")
 
   val commands = input.getLines().toList

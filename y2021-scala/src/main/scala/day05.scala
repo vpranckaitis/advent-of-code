@@ -3,11 +3,9 @@ import java.lang.Math.{max, min}
 import scala.annotation.tailrec
 import scala.io.{Source, StdIn}
 
-val Size = 5
+object day05 extends App:
+  case class Point(x: Int, y: Int)
 
-case class Point(x: Int, y: Int)
-
-object day5 extends App:
   val input = Source.fromFile("files/05.in")
 
   val directions = input.getLines().map {
